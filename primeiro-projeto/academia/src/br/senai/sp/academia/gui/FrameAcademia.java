@@ -31,7 +31,7 @@ public class FrameAcademia {
 		Jjanela.setSize(360, 600);
 		Jjanela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Jjanela.setLayout(null);
-		Jjanela.setVisible(true);
+		
 		Jjanela.setBackground(Color.BLACK);
 		Jjanela.setBounds(0, 0, 360, 600);
 
@@ -83,14 +83,14 @@ public class FrameAcademia {
 		Jsexo.setText("Sexo: ");
 		Jsexo.setBounds(15, 240, 200, 20);
 		ButtonGroup groupSexo = new ButtonGroup();
-		JRadioButton radioFeminino = new JRadioButton();
-		groupSexo.add(radioFeminino);
-		JRadioButton radioMasculino = new JRadioButton();
-		groupSexo.add(radioMasculino);
-		radioFeminino.setBounds(65, 240, 80, 20);
-		radioFeminino.setText("Feminino");
-		radioMasculino.setBounds(150, 240, 90, 20);
-		radioMasculino.setText("Masculino");
+		JRadioButton botaoFeminino = new JRadioButton();
+		groupSexo.add(botaoFeminino);
+		JRadioButton botaoMasculino = new JRadioButton();
+		groupSexo.add(botaoMasculino);
+		botaoFeminino.setBounds(65, 240, 80, 20);
+		botaoFeminino.setText("Feminino");
+		botaoMasculino.setBounds(150, 240, 90, 20);
+		botaoMasculino.setText("Masculino");
 
 		// ***************Nivel de Atividade**************************************//
 		JLabel Jatividade = new JLabel();
@@ -133,8 +133,8 @@ public class FrameAcademia {
 		Jjanela.getContentPane().add(Jaltura);
 		Jjanela.getContentPane().add(textoAltura);
 		Jjanela.getContentPane().add(Jsexo);
-		Jjanela.getContentPane().add(radioFeminino);
-		Jjanela.getContentPane().add(radioMasculino);
+		Jjanela.getContentPane().add(botaoFeminino);
+		Jjanela.getContentPane().add(botaoMasculino);
 		Jjanela.getContentPane().add(lista);
 		Jjanela.getContentPane().add(Jatividade);
 		Jjanela.getContentPane().add(Jcalcular);
@@ -142,22 +142,27 @@ public class FrameAcademia {
 		Jjanela.getContentPane().add(jimc);
 		Jjanela.getContentPane().add(Jncd);
 		
+		Jjanela.setVisible(true);
+		
 		Jcalcular.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				Cliente a1 = new Cliente();
-				DecimalFormat formato = new DecimalFormat("00.0");
+				String pattern = "###,###.###";
+				DecimalFormat decimalFormat = new DecimalFormat(pattern);
 				
 				a1.setNome(textoNome.getText());
 				a1.setDataDeNascimento(LocalDate.of(2000, 07, 03));
 				a1.setNivelDeAtividade(lista.getSelectedIndex());
-				a1.setSexo(radioFeminino.isSelected()?'m':'f');
+				a1.setSexo(botaoFeminino.isSelected()?'m':'f');
 				a1.setAltura(Double.parseDouble(textoAltura.getText()));
 				a1.setPeso(Double.parseDouble(textoPeso.getText()));
 				
-				jimc.setText("IMC:  " + String.valueOf(formato.format(a1.getStatusImc()) + "   " + a1.getStatusImc()));
-				Jncd.setText("NCD:  " + a1.getIdade() + String.valueOf(formato.format(a1.getNcd())));
+				jimc.setText("IMC:  " + decimalFormat.format(a1.getCalcularImc()) + "  " + String.valueOf(a1.getStatusImc()));
+				//jimc.setText("IMC:  " + String.valueOf(decimalFormat.format(a1.getStatusImc())));
+				Jncd.setText("NCD:  " + a1.getIdade() + String.valueOf(a1.getNcd()));
+				//Jncd.setText("NCD:  " + a1.getIdade() + String.valueOf(decimalFormat.format(a1.getNcd())));
 			}
 		});
 		

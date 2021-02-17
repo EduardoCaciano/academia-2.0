@@ -190,8 +190,8 @@ public class Cliente {
 					} else if (getIdade() >= 60) {
 						return (10.5 * this.peso + 596) * 1.6;
 
-						// Atividade Moderado
-					} else if (this.nivelDeAtividade == 2) {
+				// Atividade Moderado
+				} else if (this.nivelDeAtividade == 2) {
 						if (getIdade() >= 18 && getIdade() <= 30) {
 							return (14.7 * this.peso + 496) * 1.6;
 						} else if (getIdade() >= 31 && getIdade() <= 60) {
@@ -200,31 +200,30 @@ public class Cliente {
 							return (10.5 * this.peso + 596) * 1.6;
 							
 							// Atividade Intenso
-						} else if (this.nivelDeAtividade == 3) {
-							if (getIdade() >= 18 && getIdade() <= 30) {
-								return (14.7 * this.peso + 496) * 1.8;
-							} else if (getIdade() >= 31 && getIdade() <= 60) {
-								return (8.7 * this.peso + 829) * 1.8;
-							} else if (getIdade() >= 60) {
-								return (10.5 * this.peso + 596) * 1.8;
-							} else {
-								return 0;
-							}
+				} else if (this.nivelDeAtividade == 3) {
+						if (getIdade() >= 18 && getIdade() <= 30) {
+							return (14.7 * this.peso + 496) * 1.8;
+						} else if (getIdade() >= 31 && getIdade() <= 60) {
+							return (8.7 * this.peso + 829) * 1.8;
+						} else if (getIdade() >= 60) {
+							return (10.5 * this.peso + 596) * 1.8;
 						} else {
 							return 0;
 						}
-					} else {
-						return 0;
-					}
-				} else {
-					return 0;
-				}
-			} else {
-				return 0;
-			}
-		} else {
-			return 0;
-		}
-	}
-
+						} else {
+							return 0;
+						}
+						} else {
+							return 0;
+						}
+						} else {
+							return 0;
+						}
+						} else {
+							return 0;
+						}
+						} else {
+							return 0;
+	 }
+   }
 }
