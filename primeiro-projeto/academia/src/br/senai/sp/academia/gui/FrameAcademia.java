@@ -161,7 +161,7 @@ public class FrameAcademia {
 				
 				jimc.setText("IMC:  " + decimalFormat.format(a1.getCalcularImc()) + "  " + String.valueOf(a1.getStatusImc()));
 				//jimc.setText("IMC:  " + String.valueOf(decimalFormat.format(a1.getStatusImc())));
-				Jncd.setText("NCD:  " + a1.getIdade() + String.valueOf(a1.getNcd()));
+				Jncd.setText("NCD:  " + a1.getIdade()+ a1.getAltura() + a1.getPeso() + String.valueOf(a1.getNcd()));
 				//Jncd.setText("NCD:  " + a1.getIdade() + String.valueOf(decimalFormat.format(a1.getNcd())));
 			}
 		});
