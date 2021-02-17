@@ -36,52 +36,52 @@ public class FrameAcademia {
 		Jjanela.setBounds(0, 0, 360, 600);
 
 		// Titulo do Programa
-		JLabel Jtitulo = new JLabel();
-		Jtitulo.setText("Academia Fire in Fat");
-		Jtitulo.setFont(titulo);
-		Jtitulo.setForeground(Color.BLACK);
-		Jtitulo.setOpaque(true);
-		Jtitulo.setBackground(vermelho);
-		Jtitulo.setBounds(0, 0, 360, 50);
-		Jtitulo.setHorizontalAlignment(SwingConstants.CENTER);
+		JLabel jTitulo = new JLabel();
+		jTitulo.setText("Academia Fire in Fat");
+		jTitulo.setFont(titulo);
+		jTitulo.setForeground(Color.BLACK);
+		jTitulo.setOpaque(true);
+		jTitulo.setBackground(vermelho);
+		jTitulo.setBounds(0, 0, 360, 50);
+		jTitulo.setHorizontalAlignment(SwingConstants.CENTER);
 
 		// Informações do Cliente:
 		// ********************Nome*****************************//
-		JLabel Jnome = new JLabel();
-		Jnome.setText("Nome: ");
-		Jnome.setBounds(15, 80, 100, 20);
+		JLabel jNome = new JLabel();
+		jNome.setText("Nome: ");
+		jNome.setBounds(15, 80, 100, 20);
 
 		JTextField textoNome = new JTextField();
 		textoNome.setBounds(65, 80, 200, 20);
 
 		// ***************Data de Nascimento************************//
-		JLabel Jdata = new JLabel();
-		Jdata.setText("Data de Nascimento: ");
-		Jdata.setBounds(15, 120, 200, 20);
+		JLabel jData = new JLabel();
+		jData.setText("Data de Nascimento: ");
+		jData.setBounds(15, 120, 200, 20);
 
 		JTextField textoData = new JTextField();
 		textoData.setBounds(150, 120, 100, 20);
 
 		// ***************Peso**************************************//
-		JLabel Jpeso = new JLabel();
-		Jpeso.setText("Peso: ");
-		Jpeso.setBounds(15, 160, 200, 20);
+		JLabel jPeso = new JLabel();
+		jPeso.setText("Peso: ");
+		jPeso.setBounds(15, 160, 200, 20);
 
 		JTextField textoPeso = new JTextField();
 		textoPeso.setBounds(65, 160, 50, 20);
 
 		// ***************Altura************************************//
-		JLabel Jaltura = new JLabel();
-		Jaltura.setText("Altura: ");
-		Jaltura.setBounds(15, 200, 200, 20);
+		JLabel jAltura = new JLabel();
+		jAltura.setText("Altura: ");
+		jAltura.setBounds(15, 200, 200, 20);
 
 		JTextField textoAltura = new JTextField();
 		textoAltura.setBounds(65, 200, 50, 20);
 
 		// ***************Sexo**************************************//
-		JLabel Jsexo = new JLabel();
-		Jsexo.setText("Sexo: ");
-		Jsexo.setBounds(15, 240, 200, 20);
+		JLabel jSexo = new JLabel();
+		jSexo.setText("Sexo: ");
+		jSexo.setBounds(15, 240, 200, 20);
 		ButtonGroup groupSexo = new ButtonGroup();
 		JRadioButton botaoFeminino = new JRadioButton();
 		groupSexo.add(botaoFeminino);
@@ -93,9 +93,9 @@ public class FrameAcademia {
 		botaoMasculino.setText("Masculino");
 
 		// ***************Nivel de Atividade**************************************//
-		JLabel Jatividade = new JLabel();
-		Jatividade.setText("Nivel De Atividade ");
-		Jatividade.setBounds(15, 280, 200, 20);
+		JLabel jAtividade = new JLabel();
+		jAtividade.setText("Nivel De Atividade ");
+		jAtividade.setBounds(15, 280, 200, 20);
 
 		String nivelDeAtividade[] = { "Nenhum", "Leve", "Moderado", "Intenso" };
 		JComboBox<String> lista = new JComboBox<String>(nivelDeAtividade);
@@ -103,9 +103,9 @@ public class FrameAcademia {
 
 		
 		// Calcula os Dados
-		JButton Jcalcular = new JButton();
-		Jcalcular.setText("CALCULAR");
-		Jcalcular.setBounds(50, 320, 100, 35);
+		JButton jCalcular = new JButton();
+		jCalcular.setText("CALCULAR");
+		jCalcular.setBounds(50, 320, 100, 35);
 
 		// Limpa os Dados
 		JButton jlimpa = new JButton();
@@ -119,32 +119,32 @@ public class FrameAcademia {
 		jimc.setBounds(15, 380, 530, 20);
 		
 		//NCD
-		JLabel Jncd = new JLabel();
-		Jncd.setText("NCD: ");
-		Jncd.setBounds(15, 420, 130, 20);
+		JLabel jNcd = new JLabel();
+		jNcd.setText("NCD: ");
+		jNcd.setBounds(15, 420, 130, 20);
 
-		Jjanela.getContentPane().add(Jtitulo);
-		Jjanela.getContentPane().add(Jnome);
+		Jjanela.getContentPane().add(jTitulo);
+		Jjanela.getContentPane().add(jNome);
 		Jjanela.getContentPane().add(textoNome);
-		Jjanela.getContentPane().add(Jdata);
+		Jjanela.getContentPane().add(jData);
 		Jjanela.getContentPane().add(textoData);
-		Jjanela.getContentPane().add(Jpeso);
+		Jjanela.getContentPane().add(jPeso);
 		Jjanela.getContentPane().add(textoPeso);
-		Jjanela.getContentPane().add(Jaltura);
+		Jjanela.getContentPane().add(jAltura);
 		Jjanela.getContentPane().add(textoAltura);
-		Jjanela.getContentPane().add(Jsexo);
+		Jjanela.getContentPane().add(jSexo);
 		Jjanela.getContentPane().add(botaoFeminino);
 		Jjanela.getContentPane().add(botaoMasculino);
 		Jjanela.getContentPane().add(lista);
-		Jjanela.getContentPane().add(Jatividade);
-		Jjanela.getContentPane().add(Jcalcular);
+		Jjanela.getContentPane().add(jAtividade);
+		Jjanela.getContentPane().add(jCalcular);
 		Jjanela.getContentPane().add(jlimpa);
 		Jjanela.getContentPane().add(jimc);
-		Jjanela.getContentPane().add(Jncd);
+		Jjanela.getContentPane().add(jNcd);
 		
 		Jjanela.setVisible(true);
 		
-		Jcalcular.addActionListener(new ActionListener() {
+		jCalcular.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -161,7 +161,7 @@ public class FrameAcademia {
 				
 				jimc.setText("IMC:  " + decimalFormat.format(a1.getCalcularImc()) + "  " + String.valueOf(a1.getStatusImc()));
 				//jimc.setText("IMC:  " + String.valueOf(decimalFormat.format(a1.getStatusImc())));
-				Jncd.setText("NCD:  " + a1.getIdade()+ a1.getAltura() + a1.getPeso() + String.valueOf(a1.getNcd()));
+				jNcd.setText("NCD:  " + a1.getIdade()+ a1.getAltura() + a1.getPeso() + String.valueOf(a1.getNcd()));
 				//Jncd.setText("NCD:  " + a1.getIdade() + String.valueOf(decimalFormat.format(a1.getNcd())));
 			}
 		});
@@ -172,7 +172,7 @@ public class FrameAcademia {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				jimc.setText("IMC:  ");
-				Jncd.setText("NCD:  ");
+				jNcd.setText("NCD:  ");
 				textoAltura.setText("");
 				textoData.setText("");
 				textoNome.setText("");
